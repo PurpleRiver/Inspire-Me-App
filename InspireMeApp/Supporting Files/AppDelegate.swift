@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  InspireMeApp
-//
-//  Created by Blurry Rabbit on 16/08/2019.
-//  Copyright © 2019 Blurry Rabbit. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
