@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InspireMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="InspireMeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,6 +34,9 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="heart"/>
+                                <connections>
+                                    <action selector="favoriteButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fgA-Z2-cno"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMd-2h-ldC">
                                 <rect key="frame" x="235" y="742" width="40" height="40"/>
@@ -44,6 +47,9 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="garbage"/>
+                                <connections>
+                                    <action selector="trashButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QhY-hn-YS1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZf-Zg-fIA">
                                 <rect key="frame" x="25" y="742" width="40" height="40"/>
@@ -54,6 +60,9 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="next"/>
+                                <connections>
+                                    <action selector="shareButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pSB-A9-Wwh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itx-Nj-kHA">
                                 <rect key="frame" x="25" y="54" width="40" height="40"/>
@@ -111,9 +120,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="autorLabel" destination="0Qi-Pc-vDQ" id="cpi-2n-OPH"/>
+                        <outlet property="quoteLabel" destination="aKY-tj-vtO" id="om9-Qi-bul"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="652" y="23"/>
         </scene>
         <!--Настройки-->
         <scene sceneID="VWd-RQ-CVC">
@@ -239,8 +253,8 @@
         <!--Уведомления-->
         <scene sceneID="d7J-zT-icp">
             <objects>
-                <tableViewController title="Уведомления" modalTransitionStyle="crossDissolve" id="86b-GJ-gVB" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bKi-Wc-QhR">
+                <tableViewController title="Уведомления" modalTransitionStyle="crossDissolve" id="86b-GJ-gVB" customClass="RemaindesTableViewController" customModule="InspireMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bKi-Wc-QhR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -280,6 +294,9 @@
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="24" translatesAutoresizingMaskIntoConstraints="NO" id="b6d-aW-0Y8">
                                                     <rect key="frame" x="265" y="15.333333333333336" width="94" height="29"/>
                                                     <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="howManyRemaindersStepper:" destination="86b-GJ-gVB" eventType="valueChanged" id="yug-ob-bmL"/>
+                                                    </connections>
                                                 </stepper>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbH-I7-EuI">
                                                     <rect key="frame" x="16" y="16" width="114" height="28"/>
@@ -331,6 +348,9 @@
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="9" minimumValue="5" maximumValue="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xpb-bz-n8h">
                                                     <rect key="frame" x="265" y="15.333333333333336" width="94" height="29"/>
                                                     <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="startAtStepper:" destination="86b-GJ-gVB" eventType="valueChanged" id="5DH-P4-XrD"/>
+                                                    </connections>
                                                 </stepper>
                                             </subviews>
                                             <constraints>
@@ -367,6 +387,9 @@
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minimumValue="18" maximumValue="24" translatesAutoresizingMaskIntoConstraints="NO" id="ze3-eq-Zg0">
                                                     <rect key="frame" x="265" y="15.333333333333336" width="94" height="29"/>
                                                     <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="endAtStepper:" destination="86b-GJ-gVB" eventType="valueChanged" id="wXO-ze-O3u"/>
+                                                    </connections>
                                                 </stepper>
                                             </subviews>
                                             <constraints>
@@ -385,7 +408,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle=" " id="Blt-pP-APh">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="60" id="It5-J4-UNT">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="It5-J4-UNT">
                                         <rect key="frame" x="0.0" y="324" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="It5-J4-UNT" id="ozz-lV-YUd">
@@ -415,7 +438,7 @@
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                         <connections>
-                                            <segue destination="BeR-WO-fRV" kind="show" id="mgO-Ql-g8u"/>
+                                            <segue destination="BeR-WO-fRV" kind="show" id="QEe-7q-0XH"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -426,6 +449,11 @@
                             <outlet property="delegate" destination="86b-GJ-gVB" id="ZHB-pS-aXM"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="endAtLabel" destination="kq2-36-9w9" id="tGX-kh-PeB"/>
+                        <outlet property="howManyRemaindersLabel" destination="6rp-Kt-J4c" id="CdU-0w-NVp"/>
+                        <outlet property="startAtLabel" destination="fBR-md-3TB" id="IBS-Jq-bkI"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWE-yJ-Mky" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -454,10 +482,11 @@
                             <outlet property="delegate" destination="BeR-WO-fRV" id="MQE-Kl-1YT"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Gha-jI-Lom"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OLk-3V-Zyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3202" y="-219"/>
+            <point key="canvasLocation" x="3183" y="-219"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oRE-bP-qw6">
