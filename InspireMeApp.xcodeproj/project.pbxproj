@@ -14,6 +14,7 @@
 		49A6CA61230D1FC00026D23D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6CA60230D1FC00026D23D /* MainViewController.swift */; };
 		49A6CA63230D21B60026D23D /* RemaindesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6CA62230D21B60026D23D /* RemaindesTableViewController.swift */; };
 		49A6CA65230D247F0026D23D /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6CA64230D247F0026D23D /* Data.swift */; };
+		49A6CA67230D57170026D23D /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6CA66230D57170026D23D /* FavoritesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		49A6CA60230D1FC00026D23D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		49A6CA62230D21B60026D23D /* RemaindesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemaindesTableViewController.swift; sourceTree = "<group>"; };
 		49A6CA64230D247F0026D23D /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		49A6CA66230D57170026D23D /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			children = (
 				49A6CA60230D1FC00026D23D /* MainViewController.swift */,
 				49A6CA62230D21B60026D23D /* RemaindesTableViewController.swift */,
+				49A6CA66230D57170026D23D /* FavoritesTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				49A6CA4A23069B7F0026D23D /* AppDelegate.swift in Sources */,
 				49A6CA63230D21B60026D23D /* RemaindesTableViewController.swift in Sources */,
 				49A6CA61230D1FC00026D23D /* MainViewController.swift in Sources */,
+				49A6CA67230D57170026D23D /* FavoritesTableViewController.swift in Sources */,
 				49A6CA65230D247F0026D23D /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
