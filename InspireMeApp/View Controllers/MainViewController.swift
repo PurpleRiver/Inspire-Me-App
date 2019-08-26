@@ -11,7 +11,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func shareButtonTapped(_ sender: UIButton) {
-        let activityVC = UIActivityViewController(activityItems: [randomQuote?.text as Any, randomQuote?.autor as Any], applicationActivities: nil)
+        let activityVC = UIActivityViewController(activityItems: [randomQuote!.text as Any, randomQuote!.author as Any], applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = self.view
         
         present(activityVC, animated: true)
@@ -24,37 +24,40 @@ class MainViewController: UIViewController {
     @IBOutlet weak var autorLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
     
-    private let randomQuote = arrayOfQuotes.randomElement()
+    private let randomQuote = realm.objects(Quote.self).randomElement()
+    //var quote = Quote()
     private var isQuoteIsFavorite = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        quoteLabel.text = randomQuote?.text
-        autorLabel.text = randomQuote?.autor
+        //quote.saveQuotes()
+        
+        quoteLabel.text = randomQuote!.text
+        autorLabel.text = randomQuote!.author
         
         }
     
     private func addToFavorite() {
         
         if isQuoteIsFavorite {
-            arrayOfFavotites.removeLast()
+           // arrayOfFavotites.removeLast()
 //            print(arrayOfFavotites, "remove last")
             favoriteButton.tintColor = .white
         } else {
-            arrayOfFavotites.append(randomQuote!)
+           // arrayOfFavotites.append(randomQuote!)
 //            print(arrayOfFavotites)
             favoriteButton.tintColor = .red
         }
         
-        isQuoteIsFavorite = arrayOfFavotites.contains(where: { (result) -> Bool in
-            
-            if randomQuote?.text != result.text {
-                return false
-            } else {
-                return true
-            }
-        })
+//        isQuoteIsFavorite = arrayOfFavotites.contains(where: { (result) -> Bool in
+//            
+//            if randomQuote?.text != result.text {
+//                return false
+//            } else {
+//                return true
+//            }
+//        })
     }
     
     /*

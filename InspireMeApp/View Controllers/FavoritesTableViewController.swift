@@ -12,19 +12,15 @@ class FavoritesTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-    }
-    
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayOfFavotites.count
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteQuotesCell", for: indexPath)
-        cell.textLabel?.text = arrayOfFavotites[indexPath.row].text
+       // cell.textLabel?.text = arrayOfFavotites[indexPath.row].text
         
         return cell
     }

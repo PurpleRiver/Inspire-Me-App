@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34B2FF7F5F66C8AB2C725DA6 /* Pods_InspireMeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FFF8CCF31386F38F081AE1 /* Pods_InspireMeApp.framework */; };
 		49A6CA4A23069B7F0026D23D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6CA4923069B7F0026D23D /* AppDelegate.swift */; };
 		49A6CA4F23069B7F0026D23D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A6CA4D23069B7F0026D23D /* Main.storyboard */; };
 		49A6CA5123069B820026D23D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A6CA5023069B820026D23D /* Assets.xcassets */; };
 		49A6CA5423069B820026D23D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A6CA5223069B820026D23D /* LaunchScreen.storyboard */; };
 		49A6CA61230D1FC00026D23D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6CA60230D1FC00026D23D /* MainViewController.swift */; };
 		49A6CA63230D21B60026D23D /* RemaindesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6CA62230D21B60026D23D /* RemaindesTableViewController.swift */; };
-		49A6CA65230D247F0026D23D /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6CA64230D247F0026D23D /* Data.swift */; };
 		49A6CA67230D57170026D23D /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6CA66230D57170026D23D /* FavoritesTableViewController.swift */; };
+		49A6CA6A231019E20026D23D /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6CA69231019E20026D23D /* StorageManager.swift */; };
+		49A6CA6D23101A0B0026D23D /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6CA6C23101A0B0026D23D /* Quote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06FFF8CCF31386F38F081AE1 /* Pods_InspireMeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InspireMeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A6CA4623069B7F0026D23D /* InspireMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InspireMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A6CA4923069B7F0026D23D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49A6CA4E23069B7F0026D23D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,8 +31,11 @@
 		49A6CA5C23069BC20026D23D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		49A6CA60230D1FC00026D23D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		49A6CA62230D21B60026D23D /* RemaindesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemaindesTableViewController.swift; sourceTree = "<group>"; };
-		49A6CA64230D247F0026D23D /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		49A6CA66230D57170026D23D /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		49A6CA69231019E20026D23D /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		49A6CA6C23101A0B0026D23D /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		BE8B747BF8BE798EA16927BF /* Pods-InspireMeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InspireMeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InspireMeApp/Pods-InspireMeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F64DA63326475E7F9FD8E310 /* Pods-InspireMeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InspireMeApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-InspireMeApp/Pods-InspireMeApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34B2FF7F5F66C8AB2C725DA6 /* Pods_InspireMeApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		147DC5C1A36A7AA00D9E6CAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06FFF8CCF31386F38F081AE1 /* Pods_InspireMeApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		49A6CA3D23069B7E0026D23D = {
 			isa = PBXGroup;
 			children = (
 				49A6CA4823069B7F0026D23D /* InspireMeApp */,
 				49A6CA4723069B7F0026D23D /* Products */,
+				D798BA483FD67F1789715B8C /* Pods */,
+				147DC5C1A36A7AA00D9E6CAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +79,8 @@
 		49A6CA4823069B7F0026D23D /* InspireMeApp */ = {
 			isa = PBXGroup;
 			children = (
+				49A6CA6B231019F80026D23D /* Helpers */,
+				49A6CA68231019BA0026D23D /* Models */,
 				49A6CA5F230D1FA10026D23D /* View Controllers */,
 				49A6CA5D23069BD50026D23D /* Supporting Files */,
 				49A6CA5E230C44770026D23D /* Storyboards */,
@@ -75,7 +94,6 @@
 				49A6CA4923069B7F0026D23D /* AppDelegate.swift */,
 				49A6CA5023069B820026D23D /* Assets.xcassets */,
 				49A6CA5523069B820026D23D /* Info.plist */,
-				49A6CA64230D247F0026D23D /* Data.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -99,6 +117,31 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		49A6CA68231019BA0026D23D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				49A6CA69231019E20026D23D /* StorageManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		49A6CA6B231019F80026D23D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				49A6CA6C23101A0B0026D23D /* Quote.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D798BA483FD67F1789715B8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE8B747BF8BE798EA16927BF /* Pods-InspireMeApp.debug.xcconfig */,
+				F64DA63326475E7F9FD8E310 /* Pods-InspireMeApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49A6CA5823069B820026D23D /* Build configuration list for PBXNativeTarget "InspireMeApp" */;
 			buildPhases = (
+				18C06A4BC266D177A3E173D0 /* [CP] Check Pods Manifest.lock */,
 				49A6CA4223069B7F0026D23D /* Sources */,
 				49A6CA4323069B7F0026D23D /* Frameworks */,
 				49A6CA4423069B7F0026D23D /* Resources */,
+				696DC8AA5F94ED396FD5F861 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,6 +211,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18C06A4BC266D177A3E173D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InspireMeApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		696DC8AA5F94ED396FD5F861 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-InspireMeApp/Pods-InspireMeApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InspireMeApp/Pods-InspireMeApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		49A6CA4223069B7F0026D23D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -174,8 +268,9 @@
 				49A6CA4A23069B7F0026D23D /* AppDelegate.swift in Sources */,
 				49A6CA63230D21B60026D23D /* RemaindesTableViewController.swift in Sources */,
 				49A6CA61230D1FC00026D23D /* MainViewController.swift in Sources */,
+				49A6CA6D23101A0B0026D23D /* Quote.swift in Sources */,
+				49A6CA6A231019E20026D23D /* StorageManager.swift in Sources */,
 				49A6CA67230D57170026D23D /* FavoritesTableViewController.swift in Sources */,
-				49A6CA65230D247F0026D23D /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +419,7 @@
 		};
 		49A6CA5923069B820026D23D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE8B747BF8BE798EA16927BF /* Pods-InspireMeApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -343,6 +439,7 @@
 		};
 		49A6CA5A23069B820026D23D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F64DA63326475E7F9FD8E310 /* Pods-InspireMeApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
